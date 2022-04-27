@@ -48,11 +48,8 @@ class ViewController: UIViewController {
     }()
     
     var timer = Timer()
-    
     let shapeLayer = CAShapeLayer()
-    
     var durationTimer = 20
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.animationCircular()
@@ -62,13 +59,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         timerLable.text = "\(durationTimer)"
-        
         view.backgroundColor = .blue
-        
         setConstraints()
-        
         startButton.addTarget(self, action: #selector(startButtonTapped), for: .touchUpInside)
     }
+    
     @objc func startButtonTapped() {
         
         basivAnimation()
@@ -94,11 +89,8 @@ class ViewController: UIViewController {
     func animationCircular(){
         
         let center = CGPoint(x: shapeView.frame.width / 2, y: shapeView.frame.height / 2)
-        
         let endAngle = (-CGFloat.pi / 2)
         let startAngle = 2 * CGFloat.pi + endAngle
-        
-        
         let circularPath = UIBezierPath(arcCenter: center, radius: 120, startAngle: startAngle, endAngle: endAngle, clockwise: false)
         
         shapeLayer.path = circularPath.cgPath
@@ -109,6 +101,7 @@ class ViewController: UIViewController {
         shapeLayer.strokeColor = UIColor.gray.cgColor
         shapeView.layer.addSublayer(shapeLayer)
     }
+    
     func basivAnimation() {
         
         let basivAnimation = CABasicAnimation(keyPath: "strokeEnd")
@@ -120,6 +113,7 @@ class ViewController: UIViewController {
         shapeLayer.add(basivAnimation, forKey: "basivAnimation")
     }
 }
+
 extension ViewController {
     
     func setConstraints() {
