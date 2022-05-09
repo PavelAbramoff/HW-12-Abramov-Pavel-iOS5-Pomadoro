@@ -69,7 +69,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdt-9H-0OG"/>
+                                            <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z0p-kC-1LY"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -96,11 +96,10 @@
                     <connections>
                         <outlet property="intervalLabel" destination="OX6-X6-eKX" id="aLC-Db-sWv"/>
                         <outlet property="minutesLabel" destination="upY-7B-4kZ" id="ob3-cQ-ju9"/>
-                        <outlet property="resetButton" destination="72s-zn-1kf" id="Ot6-30-uad"/>
+                        <outlet property="resetButton" destination="72s-zn-1kf" id="3ob-Ys-rVb"/>
                         <outlet property="secondLabel" destination="8n3-dD-dYn" id="bg6-iQ-S5P"/>
                         <outlet property="shapeViev" destination="8NG-BW-AGC" id="Q4p-c9-RTw"/>
                         <outlet property="startPauseButton" destination="oBS-yV-sg1" id="8aQ-vl-lvf"/>
-                        <outletCollection property="resetButton" destination="72s-zn-1kf" collectionClass="NSMutableArray" id="fhI-JB-4st"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
